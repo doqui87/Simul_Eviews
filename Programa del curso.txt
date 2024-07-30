@@ -1,0 +1,974 @@
+**Presentación:**
+Este curso proporcionará una comprensión profunda de los fundamentos y técnicas avanzadas de la econometría, con un enfoque en el modelado de datos y la interpretación de resultados. A lo largo del curso, los estudiantes desarrollarán habilidades prácticas mediante ejercicios de laboratorio y análisis de datos reales utilizando software especializado.
+
+**Objetivos:**
+1. Comprender los conceptos fundamentales de la econometría y su aplicación en el análisis de datos.
+2. Desarrollar habilidades para realizar análisis estadísticos descriptivos y modelado de datos.
+3. Familiarizarse con técnicas avanzadas de regresión y análisis de series de tiempo.
+4. Aprender a interpretar y comunicar los resultados de los análisis de manera efectiva.
+5. Adquirir experiencia práctica a través de ejercicios de laboratorio utilizando datos reales.
+
+**Contenidos abreviados:**
+- Clase #1: Introducción
+	> Presentación del curso
+	> Instalación e interfaz de Eviews
+	> Visión general del problema de la econometría | importancia del modelado de datos
+	> El método de Monte Carlo
+
+- Clase #2: Estadística Descriptiva | Distribuciones Univariadas
+	> Medidas de tendencia central y de dispersión
+	> Visualización de datos
+	> Ley de los Grandes Números
+	> Teorema Central del Límite
+	> Distribuciones derivadas de la normal
+
+- Clase #3: Distribuciones Bivariadas
+	> Variaciones categóricas
+	> Distribución Normal Bivariada
+	> Mínimos Cuadrados Ordinarios y el Modelo de Regresión Lineal Simple (MCO | MRLS)
+	> Inferencia asintótica
+	> Introducción a los modelos no lineales
+
+- Clase #4: Laboratorio 1
+	> Hands-on! Estudio de Salarios | Sexo | Raza | Educación | Experiencia | Experiencia al cuadrado
+	> Carga de datos
+	> Construcción de nuevas series
+	> Filtrado de bases de datos
+	> Estadísticas descriptivas en Eviews
+	> Pruebas de hipótesis
+	> Presentación de resultados
+	> Estimación de modelos de regresión
+	> Gráficos de residuos
+
+- Clase #5: Matriz HAT (proyecciones | valores atípicos | heteroscedasticidad)
+	> Intervalos de regresión
+	> Heteroscedasticidad
+	> Valores atípicos y observaciones influyentes
+	> Autocorrelación
+
+- Clase #6: ECM y Trade-off Sesgo/Varianza
+	> Multicolinealidad
+	> Overfitting y underfitting
+	> Técnicas de regularización
+	> Selección de modelos
+	> Variables en exceso y en defecto
+
+- Clase #7. Baseline linear regression model
+	> Esquema inferencia: estimación | testeo (maquinaria test F)
+	> Requisitos "buenas propiedades" OLS|MLE
+	> Bondad de ajuste
+	> Train_test_split y Model Selection
+	
+- Clase #8. Survey dificultades con linear regression
+	> Heteroscedasticidad y Autocorrelación
+	> HAC estimators y GLS
+	> Inestabilidad paramétrica (Chow, Dummies, CUSUM)
+
+- Clase #9. Modelo de regresión lineal dinámico
+	> Modelo ARDL general
+	> Casos particulares
+	> Especificación y trimming (GET)
+	> Introducción al Forecasting con modelos dinámicos
+	
+- Clase #10. Evaluación y combinación de pronósticos
+	> Insesgamiento y eficiencia
+	> Performance in-sample y out-of-sample
+	> Contrastes de precisión predictiva
+	> Combinación de pronósticos
+
+- Clase #11. Modelos Univariados I: ARMA
+	> Estacionariedad | Wold decomposition
+	> Representación: modelos ARMA
+	> Identificación: Correlogramas (AC y PAC)
+	> Estimación
+
+- Clase #12. Modelos Univariados II: Unit Roots, Diagnosis, Forecasting
+	> Raíces Unitarias | Contrastes (ADF, PP, KPSS)
+	> Diagnóstico (Llung-Box)
+	> Pronósticos (con y sin incertidumbre paramétrica)
+	> Filtros (HP, Holt-Winter y Exponential smoothing)
+	> Estacionalidad (SARIMA)
+
+
+**Detalle de las clases**
+
+Clase #1: Presentación
+------------------------------
+	- Presentacion del curso
+	- Instalación e interfaz
+	- Overview del problema de la econometría | la importancia del modelado de datos
+	- El método de Monte Carlo
+
+
+Clase #2: Estadística Descriptiva (Dist Univariadas)
+-----------------------------
+	- Medidas de tendencia central y de dispersión
+
+	- Visualización de datos
+		i.   Histogramas
+		ii.  KDE
+		iii. Q-Q plots
+		iv. Boxplots
+		v. ¿Scatterplots?
+
+	- Ley de Grandes Números
+
+	- Teorema Central del limite
+
+	- Distribuciones derivadas de la normal
+		i. Chi-Sq y qué son los GL
+		ii. t-Student
+		iii. F de Fisher
+
+
+Clase #3: Distribuciones bivariadas
+-----------------------------
+	- Variaciones categoricas 
+		> Test de hipótesis (igualdad de medias)
+		> Análisis de la varianza (ANOVA)
+
+	- Normal Bivariada
+		> Esperanza condicional
+		> Correlación y covarianza
+		> Elipses de confianza
+
+	- MRLS. 
+		> Características
+		> Qué significa "minimizar cuadrados" y "Maximar la verosimilitud"
+		> Diferencias entre proyectar y estimar
+		> Distribuciones marginales y conjuntas de beta\hat y sigma\hat
+
+	- Inferencia asintóticas
+		> ¿cuán grande tiene que ser N?
+		> Efectos sobre la distribuciones empiricas de beta\hat cuando el error no es normal
+
+	- Modelos no lineales
+		> The ladder of powers
+		> Transformaciones Box-Cox
+		> Interpretación de coeficientes
+			i.   Modelos lin-lin
+			ii.  Modelos lin-log
+			iii. Modelos log-log
+			(iv.  Modelos con Variables dummy)
+
+
+
+Clase #4: Laboratorio 1
+-----------------------------
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	+			Hands-on!			+
+	=========================================================
+	+ Estudio de Salarios | Sex | Race | Educ | Exp | Expsq +
+	=========================================================
+	+	¿De cuánto es el retorno a la educación		+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+	- Carga de datos
+
+	- Construir series nuevas
+		> Codificar variables dummy
+		> Transformar variables
+
+	- Filtrado de bases de datos
+
+	- Estadística descriptiva en Eviews 
+		> Histogramas y boxplots
+		> Agrupación por categoríoas
+		> Tablas de resumen de información
+
+	- Test de hipótesis 
+		> Diferencia de medias
+
+	- Presentación de resultados
+		> Análisis de impacto 
+
+	- Estimar Modelos de regresión
+		> Para la media (variaciones categóricas)
+		> De regresión simple
+		> De regresión múltiple
+	- Gráficos de Residuos
+		> vs X's
+		> vs predictions
+		> vs #obs (autocorr. y tendencias)
+
+	
+Clase #5: HAT MAtrix (proyecciones| outliers | heteroscedasticidad)
+-----------------------------
+
+	- Intervalos de Regresión
+		> Parameter uncertainty
+		> Intervalos de confianza vs de predicción
+		> El modelo estimado es heteroscedastico aunque el verdadero no lo sea
+	
+
+	- Heteroscedasticidad: 
+		> Causas y consecuencias 
+			Verdadera heteroscedasticidad vs errores de especificación
+			Importancia de las observaciones | Estimación por MCP
+			Consecuencias sobre la varianza de los estimadores			
+		> Detección (tests de H0)
+			Breusch-Pagan-Godfrey | White | Harvey | 
+			Modelos ARCH
+		> Medidas Remediales 
+			i. Heteroscedasticity Consistent Estimations
+			   	Huber-White (HC0) | Df/Bessel adj - (HC1) | Bias/HAT adj. (HC2)
+
+	- Observaciones atípicas (outliers) y Obsercaciones influyentes 
+		> Leverage(palanca) de una observación
+		> Leave-one-out Cross Validation
+		> Identificación
+			RSTUD | DRResid | DFIT | COVRATIO | HATMATRIX 
+
+
+	- Autocorrelación
+		> Causas
+			Dinámica y economía
+			Procesos Estocásticos y Modelos de Series Temporales
+		> Consecuencias
+			Sesgo | Consistencia			
+		> Detección 
+			Durbin-Watson | Llung-Box/Portmanteu Q |Augmented Dickey Fuller (ADF)
+		> Medidas remediales 
+			Mínimos Cuadrados Generalizados (MCR) y Cochrane-Orcutt
+			HAC Robust Estimation (Newey-West)
+		
+				
+
+Clase #6: ECM y Trade-off Sesgo/Varianza
+-----------------------------
+
+	- Multicolinealidad:
+		> Causas
+		> Consecuencias y Detección
+			Efectos sobre: R2 | t-statistics | F-Statistics
+			Factores Infladores de varianza (VIF)
+			Métodos gráficos (Scatter matrices)
+		> Descomposición de la varianza basada en SVD
+		> Efecto sobre B y sobre RB
+			Mínimos Cuadrados restringidos (MCR)
+			Restricciones verdaderas y aproximadamente verdaderas
+			Test de Wald
+		> Corrección basada en SVD/PCA
+
+
+	- Overfitting y underfitting
+
+		> Regresión polinómica
+			Conjuntos de entrenamiento y testeo
+			Trade-off Sesgo/Varianza
+
+		> Técnicas de regularización
+			LASSO | RIDGE | Elastic-Net
+			Cross-Validation
+		> Model Selection
+			Criterios de información 
+				AIC|BIC|AdjR2
+			Varselect
+				Algoritmos stepwise y backwise
+
+	- Variables de más y de menos
+		> Inclusión de variables irrelevantes
+			Eficiencia de MCO
+
+		> Omisión de variables relevantes
+			Consistencia de MCO
+			Heterogeneidad inobservable y proxies
+
+
+
+**********************************************************
+	Clase 7. Baseline linear regression model
+**********************************************************
+			y = xb + e
+
+A. Hipótesis:
+--------------
+	1. E(e) = 0
+	2. E(ee') = sigma I
+	3. E(ux)=0
+	4. existe X'X^-1
+	5. X es débilmente estacionario
+
+
+B. Estimación por MCO
+----------------------
+	1. Insesgamiento
+	2. V(beta_hat) = sigma^2/T (X'X/T)^-1
+		- lim_(T->infty) V(beta_hat) = 0 [convergencia en probabilidad, consistencia]
+
+	3. residuos = HAT e
+		- sigma2_hat -> scr/(T-k)
+
+	4. Si e~N(0, sigma2)
+		sqrt(T) (beta_hat-beta) ~ N(0, I(thea)^-1)
+		(T-K)sigma2_hat/sigma2
+
+C. Bondad de ajuste
+--------------------
+	1. R2 = 1- RSS/TSS  ---> corr(y, y_hat)
+	2. R2adj = 1- (RSS/T-k)   /  (TSS/n-1)
+
+
+D. Point forecasts
+--------------------
+	Ver derivación de mejor forecast (vía Lagrange) en Gysels (2018) p.10
+
+	Var(mu_hat) vs Var(y_hat) vs Var(y)
+
+	1. Forecast puntual
+	2. Density forecast 
+
+
+E. Test de hipótesis
+-----------------------
+	0. La "maquinaria" de los test F
+	1. Distribución de estimadores
+		Test T  |  Test F
+	2. p-values
+
+
+F. Selección de Variables
+-----------------------
+Métodos automáticos: min f(RSS) + lambda (g(betas))
+
+	1. Forward y Backward selection
+		Hard | Soft thresholding
+	2. Least angle regression (LARS)
+	3. Lasso y Ridge
+	4. Elastic Net
+
+
+G. Multicolinealidad
+--------------------------
+	1. PCA
+	2. PCR
+
+
+H. DATOS SIMULADOS
+-------------------
+
+	y = log(Y) - observo Y
+	y ~ 1 + D + x + x(-1) + y(-1)
+
+	train_test_split (1/2)
+
+	setear train sample
+
+	0. EDA. Scatter. Correlación alta
+	1. Estimar ecuación estática
+	2. Ver e interpretar salida modelo regresión
+
+	setear test sample
+	
+	3. Hacer el forecast estático de y(+h) asumiendo que conozco x(+h)
+	4. Hacer el forecast recursivo (expanding window)
+	5. calcular RMSE y MAFE
+
+
+
+I. DATOS REALES
+------------------
+
+	1. Ilustra que distintos criterios pueden elegir distintos modelos
+	2. No significancia de algunos regresores
+
+	3. Replicar ejercicio de predecir USA GDPgrowth  vs IPR, SU, PR, y SR (EMAE, sentimientos, IPC y S&P)
+
+	Model1.  IPR, SU, PR, y SR
+	Model2.  IPR, SU,     y SR
+	Model3.  IPR, SU,
+
+
+	1. Estimar modelos estáticos:
+		Model 1 es el de mejor R2 y R2adj
+	2. Forecasts estáticos y dinámicos: ídem
+
+
+J. A hint of dynamics
+-----------------------
+	Leading indicator model (y~x(-1))
+
+	De repente model3 es el mejor prediciendo.
+
+
+
+************************************************
+	Clase 8. Model Mis-specification
+************************************************
+			y = xb + e
+
+	Los contrastes de errores de especificación son un ingrediente clave para la formulación de modelos de pronóstico. 
+
+
+A. Heteroscedasticidad y Autocorrelación
+-----------------------------------------
+
+	Var(e) = Omega
+
+
+	Soluciones:
+	------------
+		1. Mejorar la especificación
+		2. Transformar las variables (ej Y -> y=Log(Y))
+		3. Cambiar la forma de computar la varianza, estimación robusta (HAC).
+			HCO: sigma2_hat = e2_hat T/(T-K)
+			HC1: sigma2_hat = e2_hat 1/(1-h)
+			HC2: sigma2_hat = e2_hat 1/(1-h)^2
+			
+			De forma similar hay métodos de kernel automáticos para estimar la autocorrelación de residuos.
+
+		4. GLS | FGLS
+			GLS es insesgado, eficiente y consistente y asintóticamente normal
+			FGLS es feasible GLS. Omega_hat tiene demasiados parámetros. Beta_FGLS no es linear (ergo, no es BLUE), no es insesgado, pero es consistente si la estimación de omega es consistente.
+
+
+	
+	Contrastes:
+	-----------
+
+		- Goldeld-Quandt (GQ): H1: sigma es porporcional a Z
+			Ordenar observaciones por Z
+			Eliminar observaciones centrales (20%)
+			Testear igualdad de varianzas de las 2 submuestras
+
+
+		- Breusch-Pagan-Godfrey (BPG): 
+			Estimar MCO
+			e2_hat ~ Z.
+			Testear R2 =  0
+
+		- White:
+			Polinomio en variables con términos de interacción
+			estadístico W = T . R2 ~ Chi(k)
+
+
+		- Durbin-Watson (DW):
+			DW = 2 (1-rho_hat)
+			Estrictamente solo es valido si hay regresores no estocásticos
+
+		- Breush-Godfrey (LM):
+			rj_hat = cov(e, e(-j))
+			LM = T sum_sq(rj_hat) ~ Chi(m)
+
+
+		- Llung-Box (Q) =  sum_sq(rho_k) n (n+2) / (n-k) ~ chi(n-k)
+
+
+
+B. Inestabilidad Paramétrica
+------------------------------
+
+		- Efectos sobre forecasting cuando el quiebre se produce en el train_test_split
+
+		- Tests de Chow: parámetros y/o varianza.
+
+		- Métodos recursivos:
+			fe = one-step-ahead recursive residuals
+			CUSUM: suma de errores normalizados
+			CUSUMsq: suma de errores normalizados
+
+		- Variables Dummy
+			Como chow, pero más flexibilidad
+			Permiten incluso una transición suave 
+				e.g. d = f(x) logística 
+				(parámetros exógenos, o estimados vía NLS)
+
+		- Múltiple breaks
+			- Espeficicar los breaks exógenamente
+			- Detectarlo basado en likelihood ratio test (Bai & Perron)
+
+
+C. Datos SIMULADOS del cap 1
+------------------------------
+	1. Normalidad: JB, OK.
+
+	2. Homoscedasticidad: BPG y White. Both reject
+
+	3. Autocorrelación: DW(<1) | LM test - 
+
+	4. Inestabilidad paramétrica:
+		Chow en 151 201 y 251 all reject stability
+		Bai-perron (highest significant, trimming 0.15, max breaks 5, significance=5%) detecta 5 quiebres
+		Dummy = 1 for t>200: 
+			- Test de igualdad paramétrica a los verdaderos
+			- Cambio de régimen significativo
+	5. Forecast evaluation
+		Comparación entre escenario con y sin dummies
+
+
+D. Datos reales: US GDP Growth
+-------------------------------
+
+	1. Sample 1985Q1 - 2013Q4
+	2. Elegimos Model 2
+	3. Heteroscedasticidad: OK
+	4. Autocorrelacion: DW y LM OK
+	5. Break en 2001Q1 y Q2, 2007Q3 y Q4
+		Chow Ch1:
+			Break en coeficientes siempre
+			no-break en varianza siempre
+		Bai-Perron
+			5 breaks: 1989Q4, 1996Q2, 2000Q3, 2004Q4, 2009Q1.	
+
+	6. Dummys:
+		Model 2.1: Model 2 + dummmy(2000Q1-2001Q4) 'crisis puntocom 
+		Model 2.2: Model 2 + dummmy(207Q4-2009Q2)  'crisis subprime
+		Model 2.3: Model 2 + ambas dummys
+
+		Ambas dummy son significativas en 2.1 y 2.2 pero ninguna lo es en 2.3.
+		Sin embargo, tiene mejor bondad de ajuste (R2adj, AIC, HQ) 
+	
+
+
+******************************************
+	Clase 9. Modelos Dinámicos
+******************************************
+	
+	Modelo ARDL(1,1): y ~ b0 + b1 x + b2 x(-1) + a1 y(-1)
+
+
+A. Casos particulares
+----------------------
+
+	1. Modelo estático: b2 = a1 = 0
+	2. Modelo Ar(1): b1 = b2 = 0
+	3. Random Walk:  b1 = b2 = 0 | a1=1
+	4. 1st Diff Model: b1 = -b2  | a1=1
+	5. Leading Indicator: a1 = b1 = 0
+	6. DL: a1 = 0
+	
+	7. GDL (geometric distributed lags) bi =b (w^i L^i)
+	8. Partial Adjustment: b2=0 (ajusta y al equilibrio)
+	9. ECM: b1+b2+a1=1
+	10. OLS con autocorrelación: a1b1+b2 = 0 (COMFAC common factor restriction). 		Es una restricción no lineal
+
+
+B. Estimación y Testeo
+------------------------
+
+	Del Cap1 sabemos que consistencia requiere E(ex) = 0. Consistencia entonces se reduce generalmente a E(e e(-k)) = 0 para todo k>0.
+	Sino hay que hacer  estimación por IV. Dado que la distribución es normal asintóticamente solo, 
+
+
+C. Especificación del Modelo
+----------------------------
+
+	Conviene hacer lo que Hendry (1995) denominó búsquedasdasdasa de lo general a lo particular.
+	Por ende, se empieza con ARDL(p,q) con p=q grande.
+	El modelo se va "podando" sucesivamente, primero el orden del ARDL, y después ensayando los casos particulares
+
+
+	Cuidado que 
+		si p es demasiado grande, se estará corriendo el riesgo de multicolinealidad severa
+		pero si es demasiado chico, las estimaciones son inconsistentes
+
+	Es usual: p=4 para quarterly y p=12 para monthly data.
+		Una alternativa es arrancar con un modelo sobreespecificado y trimmearlo con LASSO.
+
+		Otra posibilidad es hacer un grid-search o algo así usando alguna Loss predeterminada.
+			- In sample basado en algún informacion criteria (AIC, BIC, HQ)
+
+D. Forecasting en modelos dinámicos
+------------------------------------
+	1. Si la dinámica viene de X, y X es conocida, OK
+	2. Si X hay que forecastearlo, hay que forecastear X e Y "simultáneamente" (lo vemos después)
+	3. Si la dinámica viene de Y, 
+
+
+	True model (conocido):
+		Y = e + a Y(-1) 
+		[e = true error | a = slope]
+
+	Forecast 
+		one step ahead:	yf(+1) = a y
+		h stepd ahead:	yf(h) = a yf(h-1) = a^h y
+
+	Forecast error h steps ahead:
+		fe(+h)  = y(+h) - yf(+h)
+			= e(+h) + a (y(h-1) - yf(h-1))
+			= e(+h) + a fe(+h-1)
+			= e(+h) + a e(+h-1) + a^2 fe(h-2)
+		y en general es un MA(h-1) con coeficiente a^i (i=0, ..., h-1)
+
+	Propiedades
+		E(fe(h)) = 0
+		V(fe(h)) = σ Σ(a^2i) (i=0, ..., h-1)
+		
+		Si hay incertidumbre paramétrica y las X fueron predichas, la varianza obviamente aumenta.
+
+		Si e ~ N(0,σ) => y(+h) ~ N (yf(+h), V(fe(h)) (mismo caveat que arriba sobre incertidumbres)
+	
+
+
+E. Resultados basados en simulación
+------------------------------------
+
+	Recorrer grid-search para seleccionar modelos ARDL(p,q) con p=0,...,2 y q=0,...,2 (8 modelos total)
+	
+	Controlar R2, DW.
+	
+	Forecasting con este modelo:
+		obs 301-501 es forecast.
+		Static forecast: one-step ahead
+		Dynamic: usar yf para t>301
+		Recursive: (cada vez que se agrega una obs, reestimar)
+
+			Forecasting Method
+			Static 	Recursive
+		RMSFE 	1.109 	0.966
+		MAFE 	0.865 	0.761
+
+	Comparar con los forecast del modelo estático:
+
+			Forecasting Method
+			Static 	Recursive
+		RMSE 	9.7426 	9.5705
+		MAFE 	8:0798 	7.9432
+
+
+
+******************************************
+	Clase 10. Forecast Evaluation
+******************************************
+
+- train_test_split()
+- Objeto ecuación en Eviews
+- Forecast estáticos y dinámicos -> forecast en test sample
+- Make model a partir del forecast -> dynamic solve en test sample
+- Hacer un grupo para comparer las 3 series (real, forecast, solved)
+
+
+
+
+	3 preguntas:
+		¿Qué tan "bueno" es un forecast? -> propiedades que tiene
+		¿Es un forecast mejor qeu otro? -> estadísticos (MSFE)
+		¿Es posible mejorar un forecast combinando varios? 
+
+	Recordar:
+		Buen ajuste in-sample no implica buena performance out-of-sample 
+
+
+A. Insesgamiento y eficiencia.
+-------------------------------
+	- Por qué son deseables
+		Eficiencia> fe(+h) at most MA(h-1) e incorrelacionada con datos en t-i
+
+	- Prueba insesgamiento:
+		y(+h) ~ a + b yf(+h)   | fixed h steps ahead, out-of-sample
+		fe(+h) ~ a + (b-1) yf(+h) [equivalente a la anterior]
+		a=0 y b=1 es suficiente pero no necesario. a = (1-b)E(yf(+h)) es necesario.
+			la condición suficiente puede ser testeada por una estimación robusta de la prueba (pues errores autocorr)
+			la cond. necesaria: fe(+h) ~ c y TSI sobre c_hat
+			la cond. suficiente implica yf y fe no están correlacionados.
+			
+
+	-  Descomposición Varianza (ECM)
+		var(y) = bias_sq(yf) + var (yf) + var(e)
+		
+
+	- Weak efficiency: fe(+h) autocorrelación at most h-1 -> estimar un MA(h-1) y testear ruido blanco de esos residuos
+	- Strong efficiency: fe ~ f(Z) no debiera dar significativo para ninguna variable Z (ojo con la regresión espúrea).
+
+
+
+B. Evaluación de fixed events forecasts
+----------------------------------------
+	La sección anterior estimó H steps ahead.
+	Pero podemos también ver la capacidad predictiva media del modelo de predecir una fecha concreta.
+
+
+C. Tests of predictive accuracy
+-------------------------------
+
+	Una manera de chequear que el modelo "anda bien" es 
+		estimar la varianza del error in-sample 
+		calcular la varianza out-of-sample
+		hacer un test de Wald de igualdad de varianzas
+
+D. Forecast comparison
+-----------------------
+	hay dos modelos M1 y M2, cada uno con su fe. Entonces
+			u1 = fe1 - fe2
+			u2 = fe1 + fe2
+
+			Corr(u1,u2) = MSFE1 - MSFE2
+
+
+			DM (diebold mariano test) = sqrt(h) mean(d) / sigma(d) ~ chi(h) (asintóticamente)
+
+			MGN (Morgan-Granger-Newbold) = testear si u1 y u2 están correlacionados
+				t-stat(h-1) = srt(h-1)   r/sqrt(1-r^2)
+	
+
+ E. Forecast combination
+---------------------------
+
+	Pooled forecast. ¿por qué funciona?
+
+		yc = a yf1 + (1-a) yf2
+
+	Si ambos son insesgados, yc es insesgado.
+	Los pesos que minimizan MSFEc son
+
+	Asumiendo que MSFE1,  MSFE2, r=cov(yf1, yf2) son conocidos:
+		a* =  MSFE2 - r sqrt(MSFE1 MSFE2) / (MSFE1 + MSFE2 - 2 r sqrt(MSFE1 MSFE2))
+		MSFEc = MSFE1 MSFE2(1-r^2) / (MSFE1 + MSFE2 - 2 r sqrt(MSFE1 MSFE2))
+
+	Una alternativa es estimar
+		y ~ yf1 + yf2
+
+
+F. Datos simulados
+--------------------
+
+	Model1:	y ~ x
+	Model2:	y ~ d + x + dx [d=dummy]
+	Model3:	y ~ d + x + dx + x(-1) + y(-1)
+
+
+	1. Determinar qué tan bueno es el forecast de cada modelo
+	- Errores de espeficiación tienen alto impacto en la capacidad de forecasting
+
+	Forecaster	RMSFE	RMSFE 	MAFE	MAFE
+				recursive 	recursive
+	-------------------------------------------------
+	Model1 		9.536 	9.490 	7.995 	7.950
+	Model2		10.130 	9.642 	8.314 	7.938
+	Model3**	1.108 	0.965 	0.865 	0.760
+
+	2. ¿Es la diferencia estadísticamente significativa? [Obvio que si, pero a chequear]
+
+	Diebold-Mariano test: 
+	--------------------------------------
+	Comparisons 	M1vsM2	M1vM3	M2vsM3
+	DM stat 	-1.113 	8.582 	11.445
+	P-value 	0.132 	0.000 	0.000
+
+	M1vsM2 son igual de buenos, M3 es mejor que cualquier otro.	
+
+	Morgan-Granger-Newbold test:
+	--------------------------------------
+	Comparisons 	M1vsM2	M1vM3	M2vsM3
+	MGN stat	-1.100 	42.932 	65.137
+	P-value 	0.273 	0.000 	0.000
+
+
+	3. Insesgamiento y weak efficiency
+	
+	insesgamiento: fe(+1) ~ c y TSI sobre c_hat
+		M1: sesgado	|	M2: insesgado	| 	M3: insesgado
+
+	weak efficienty: ¿fe está autocorrelacionado?: Durbin-Watson o Llung-Box statistics.
+
+
+
+**********************************************************
+	Clase 11. Modelos Univariados I: ARMA
+**********************************************************
+
+	Box y Jenkins popularizaron los Univariate Time Series Models para forecasting
+
+	Idea: explotar el pasado para forecastear el futuro.
+	
+	Condición: estacionariedad débil | el futuro es suficientemente parecido al pasado.
+
+	Wold-decomposition: si y ~ weak-stationary => y ~ MA(∞)
+		>>> Aproximar ese proceso MA.
+
+	Estacionariedad Estricta | Estacionariedad en autocovarianzas.
+
+	2 Herramientas analíticas funcamentales:
+		AC(k):	Autocorrelación de orden k
+		PAC(k):	φₖₖ = coeficiente de y(-k) en y ~ y(-1) + ... + y(-k)
+
+	Características del AR(): Idenficación basada en PAC
+	Características del MA(): Identiciación basada en AC
+
+	Estacionariedad:
+		de la parte AR
+	Invertibilidad
+		de la parte MA
+
+
+**********************************************************
+	Clase 12. Raíces Unitarias (ARIMA)
+**********************************************************
+
+	
+A. Distintas especificaciones
+------------------------------
+	
+	y = T + z
+	T = y0 + t @trend
+	z = ρ z(-1) + u
+
+	Procesos TSP vs DSP	
+
+	Random Walk y Random walk con deriva (drift)
+
+	DF vs ADF Tests.
+
+B. Augmented Dikey-Fuller Test
+---------------------------------
+	Versiones del test	
+		1. RW VS Estacionario (μ=0)
+		2. RW VS Estacionario (μ≠0)
+		3. RW+D vs TSP
+
+
+	Potencia del test
+
+C. Simulación:
+---------------
+	Distribución de los estimadores de ρ bajo las distintas versiones de H0
+	Convergencia es T y no sqrt(T)
+
+
+D. Contrastes alternativos
+----------------------------
+	- Philips-Perron: ADF modela autocorrelación como ARMA. PP la modela estimando HAC robust
+	- DF-GLS
+	- UR + Quiebres estrucurales (Perron, 1989) | Zivot & Andrews (1992)
+	- KPSS: H0 = Estacionariedad.
+
+
+E. Forecasting con ARIMA
+--------------------------
+	Ilustrar algunos ejemplos
+		AR  |  MA  |  RW
+	
+	Aunque el error sea WN, el forecast error es un MA(h-1)
+	La varianza crece con el horizonte de predicción
+
+
+F. Hacer un Fan-chart
+----------------------
+
+	Otra idea: programar Grid-Search para auto-ARIMA con elección de criterio.
+	
+
+G. Filtros
+-----------
+
+	Filtro Horick-Prescott (HP): elegir f(t)
+		min sum_sq(y- f(t)) + λ sum{ [f(t+1)-f(t)]² + [f(t) - f(t-1)]²} 
+		[penalidad por changing slope]
+
+	Exponential Smoothing
+		y* = a y + (1-a) y*(-1)
+		Usar yf(+h) = y* -> óptimo si ARIMA(0,1,1)
+ 
+	Holt-Winter: Agregar una tendencia a Exponential Smoothing (óptimo para  ARIMA(0,2,2)
+
+
+H. Estacionalidad
+------------------
+	- Determinística (ARMAX)
+		x = s + y  | s = sum(δ dummies)  y~ARIMA 
+
+	- Estocástica (SARIMA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Clase #13: Tópicos adicionales
+-----------------------------
+	
+	 - Variables binarias
+		> Indicator variables y múltiples categorías
+		> Regresores categoricos
+			Efectos aditivos y multiplicativos
+
+		> Inestabilidad estructural con vars. dummy
+			Chow | RESET | CUSUM | CUSUMSQ
+
+		> Variable respuesta dicotómica
+			intro a LOGIT | PROBIT
+		
+	- Métodos no-paramétricos
+		> Vecinos más cercanos (KNN)
+		> Splines
+
+	- Heterogeneidad inobservable
+		> Variables Proxy
+		> Variables Instrumentales (IV)
+		> MCO en 2 etapas (2SLS)
+		> Instrumentos débiles
+		
+	- Análisis de Componentes principales
+		> Valores singulares
+		> Componentes principales
+		> Otras técnicas de reducción de dimensionalidad
+	
+	- Modelos Univariados de Series de tiempo
+		> Estacionariedad
+		> Modelos ARMA
+		> Contrastes de Raíces unitarias
+		> Cointegración
+
+	- Modelos No Lineales NLS
+		> Modelos de umbrales discretos (TR)
+		> Umbrales autorregresivos (TAR)
+		> Smooth threshold autoregreshion (STAR)
+		> Auto-excitantes (SETAR)
+
+	- Modelos Multivariados de Series de Tiempo
+		> Vectores Autorregresivos (VAR)
+		> Identificación (Chol y SVAR)
+		> Modelos de corrección de errores (ECM)
+
+
+
+Clase #8: Laboratorio 2
+-----------------------------
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	+			Hands-on!			+
+	=========================================================
+	+	Wealth | Income | Male | Married | Age | Fsize	+
+	=========================================================
+	+ Wages2 DataSet - Wooldridge(2009) Introd. Econometrics+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+	- Proyecto econometría de la A a la Z 
+	- Cómo estructurar el análisis
+	- Cómo registrar el proceso de análisis
+			Notas | Spools
+	- Cómo armar un informe técnico / paper
+
+
+
+	Actividades Lab1:
+		> Carga de datos
+		> Codificar dummies y transformar variables
+		> EDA: Análisis descriptivo
+		> Estimación por LS | MCO 
+	
+	Postestimación
+		> Constraste de hipótesis G-M 
+		> Análisis de normalidad de residuos
+		> Presencia de outliers
+		> Test de hipótesis en MRL | Wald Test		
+		> Constrastes de forma funcional
+		> Heteroscedasticidad
+			Estimación robusta a la heteroscedasticidad
+			WLS | MCP
+
+
+	
