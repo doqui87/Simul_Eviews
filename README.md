@@ -1,7 +1,7 @@
 **Curso corto de econometría e introducción al análisis de series de tiempo**  
 Este curso está todavía en versión beta.  
-Las clases 1-6 siguen acompañan el libro de Hansen (2022) Econometrics. Princeton University Press  
-Las clases 7-12 siguen el libro de Gysells & Marcellino (2018) Applied Economic Forecasting Using Time Series Methods, Oxford University Press  
+Las clases 1-6 siguen parcialmente a Hansen (2022) Econometrics. Princeton University Press  
+Las clases 7-12 toman muchos elementos de Gysells & Marcellino (2018) Applied Economic Forecasting Using Time Series Methods, Oxford University Press  
 
 
 **Objetivos:**
